@@ -5,27 +5,27 @@ public class ProfilePrint {
     String name;
     boolean isMarried;
 
-    public void setAge(int val){
+    public void setAge(int val) {
         age = val;
     }
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
 
-    public void setName(String str){
+    public void setName(String str) {
         name = str;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setMarried(boolean flag){
+    public void setMarried(boolean flag) {
         isMarried = flag;
     }
 
-    public boolean isMarried(){
+    public boolean isMarried() {
         return isMarried;
     }
 
