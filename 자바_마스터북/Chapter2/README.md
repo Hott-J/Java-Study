@@ -89,12 +89,26 @@ void setScore(int score){
     - 생성자에서 지정
 - 값이 나중에 변하는 것
     - 메서드나 필드를 통하여 값을 설정
-- 유지보수를 생각하여 가장 인수가 많은 생성자에 필요한 처리를 기술하고, 인수가 적은 생성자에서는 this를 사용하여 별도의 생성자를 호출하는 식이 좋다
+- 유지보수를 생각하여 코드를 공통화할 수 있는 경우는 가장 인수가 많은 생성자에 필요한 처리를 기술하고, 인수가 적은 생성자에서는 this를 사용하여 별도의 생성자를 호출하는 식이 좋다
+    - 
 
 ```java
-Student(String name) {
+class Student {
+    String name;
+    int score;
+}
+
+Student(String name, int score) { // 인수가 가장 많은 생성자에 필드의 초기화를 기술
+    this.name = name;
+    this.score = score;
+}
+
+Student(String name) { // 인수가 적은 생성자에서는 this를 사용
     this(name, 0);
 }
+
+Student shion = new Student("시온"); // name: 시온, score: 0
+shion.score = 80; // name: 시온, score: 80
 ```
 
 ## 애노테이션
